@@ -1,0 +1,18 @@
+[project]
+name = "memory"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "langchain>=1.4.9",
+  "langchain-deepseek>=1.1.1",
+  "pydantic>=2.14.3",
+]
+
+[project.scripts]
+memory = "memory:main"
+
+[build-system]
+requires = ["uv_build>=0.12.15,<0.13.0"]
+build-backend = "uv_build"
