@@ -32,10 +32,6 @@ def create_client(dimension: int) -> MilvusClient:
                 default_value=[],
             )
 
-            schema.add_field(
-                field_name="metadata", datatype=DataType.JSON, default_value={}
-            )
-
             client.create_collection(
                 collection_name="memory", schema=schema, metric_type="COSINE"
             )
