@@ -238,7 +238,7 @@ source_draft: draft_1_0.md
 
 ### 5.2 模型、框架与配置
 
-- 主 Agent 和记忆 Agent 使用 `langchain_deepseek`，模型名按 Draft 固定为 `deepseek_flash`。
+- 主 Agent 和记忆 Agent 使用 `langchain_deepseek`，模型名固定为 `deepseek-flash`。实施时服务拒绝 Draft 中的 `deepseek_flash` 并返回有效名称；用户于 2026-11-12 确认修正为 `deepseek-flash`。
 - 向量化使用 DashScope，模型名按 Draft 固定为 `qwen3.7-text-embedding`。
 - 模型名称在代码中以常量定义，不增加 `.env`，不改为用户交互选择模型。
 - 凭据从已有系统环境变量读取；不打印密钥、不将密钥写入记忆文件。具体 SDK 调用使用项目锁定版本支持的接口。
@@ -392,3 +392,4 @@ flowchart TD
 | --- | --- | --- |
 | 2026-11-12 | spec_1_0_0 | 根据 `draft_1_0.md` 和本次会话确认生成首版 Spec；明确实体当前状态、语义追加历史、无实体记忆分支及不包含持久记忆召回的范围。 |
 | 2026-11-12 | spec_1_0_1 | 根据用户反馈明确充分证据与不确定时舍弃的原则，覆盖实体、关系、语义、流程状态和验收；关键词查询限定为仅匹配 `keywords`。 |
+| 2026-11-12 | spec_1_0_2 | 根据真实接口返回及用户确认，将 DeepSeek 模型名由 `deepseek_flash` 修正为 `deepseek-flash`；其他需求与技术设计不变。 |

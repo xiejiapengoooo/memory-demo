@@ -1049,6 +1049,7 @@ dependencies = [
     { name = "dashscope" },
     { name = "langchain" },
     { name = "langchain-deepseek" },
+    { name = "langgraph" },
     { name = "pydantic" },
     { name = "pymilvus", extra = ["milvus-lite"] },
 ]
@@ -1058,6 +1059,7 @@ requires-dist = [
     { name = "dashscope", specifier = ">=2.0.4" },
     { name = "langchain", specifier = ">=1.4.9" },
     { name = "langchain-deepseek", specifier = ">=1.1.1" },
+    { name = "langgraph", specifier = ">=1.2.20" },
     { name = "pydantic", specifier = ">=2.14.3" },
     { name = "pymilvus", extras = ["milvus-lite"], specifier = ">=3.0.2" },
 ]
