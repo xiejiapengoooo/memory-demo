@@ -1,3 +1,7 @@
+---
+created_at: 2026-11-11
+---
+
 ### 记忆系统
 
 记忆系统由实体，实体结构化信息，语义信息构成，实体和实体通过结构化信息关联，实体和语义信息也可关联。
@@ -261,7 +265,7 @@ message-3-assistant: 我叫谢佳鹏，我离职了。
 5. 通过分析上下文，建立或解除实体和实体两两之间的关系，并更新。
 6. 根据上下文和各实体id，生成事实语义信息，并关联实体id，保存到向量数据库。
 
-#### 整体架构
+#### 整体架构和技术方案
 
 主 agent：负责完成对用户消息的回答。
 
@@ -280,9 +284,7 @@ message-3-assistant: 我叫谢佳鹏，我离职了。
 #### 目录文件说明
 
 - .memory/: 记忆数据存储位置
-- drafts/: 草稿箱
-- specs/: 基于草稿箱里文件生成对应的需求文档，比如 `draft-1.md` -> `spec-1.md`
 - src/memory/: 项目代码主目录
-- src/memory/agents: 存放各种 agent
+- src/memory/agents: 存放各种 agent 目录
 - src/memory/agent.py: 主 agent
 - src/memory/milvus.py: 向量数据库
